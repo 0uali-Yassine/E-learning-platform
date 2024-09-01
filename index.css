@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .header-font {
+        font-family: "Kanit", sans-serif;
+        font-style: normal;
+    }
+
+    .main-font {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        
+    }
+
+    .register{
+        box-shadow: 3px 2px 0px black;
+        transition: all 0s linear .1s;
+    }
+    .register:hover{
+        box-shadow: 5px 4px 0px black;
+    }
+
+    .info{
+        box-shadow: 10px 10px 1000px black;
+    }
+    .paraLearn{
+      font-size: 15px;
+    }
+   
+
+  /* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    margin: 30px auto;
+    font-size: 30px;
+    color :#0000;
+    color: #8b4fc4;
+    overflow: hidden;
+    animation: l9 5s infinite cubic-bezier(0.3,1,0,1);
+  }
+  .loader:before {
+    content:"Loading..."
+    
+  }
+  @keyframes l9 {
+    0%  {text-shadow: 0    0 #000, 11ch 0 #fde047, 22ch 0 #38b66d, 33ch 0 #8b4fc4,44ch 0 #000}
+    25% {text-shadow:-11ch 0 #000,  0ch 0 #fde047, 11ch 0 #38b66d, 22ch 0 #8b4fc4,33ch 0 #000}
+    50% {text-shadow:-22ch 0 #000,-11ch 0 #fde047,  0ch 0 #38b66d, 11ch 0 #8b4fc4,22ch 0 #000}
+    75% {text-shadow:-33ch 0 #000,-22ch 0 #fde047,-11ch 0 #38b66d,  0ch 0 #8b4fc4,11ch 0 #000}
+    100%{text-shadow:-44ch 0 #000,-33ch 0 #fde047,-22ch 0 #38b66d,-11ch 0 #8b4fc4, 0ch 0 #000}
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.2); /* White background with 20% opacity */
+    backdrop-filter: blur(10px);          /* Blurs the content behind the div */
+    -webkit-backdrop-filter: blur(10px);  /* For Safari support */
+    border-radius: 10px;                  /* Rounds the corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: subtle white border */
+    padding: 20px;                        /* Padding inside the div */
+}
+
+
+  /*responsive*/
+  @media only screen and ( 100px <= width <= 2120px){
+
+    .menuBar{
+      display: none;
+    }
+  }
+
+  @media only screen and ( 100px <= width <= 1120px) {
+    .hero{
+      height: 400px;
+    }
+  }
+
+  @media only screen and ( 100px <= width <= 890px) {
+    .hero{
+      height: 480px;
+    }
+  }
+
+  @media only screen and ( 100px <= width <= 734px) {
+    .hero{
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+    }
+
+    .img_hero{
+      height: 60%;
+      width: 50%;
+    }
+  }
+
+  
+  @media only screen and ( 100px <= width <= 650px) {
+    .Allstatic{
+      flex-direction: column;
+      height: auto;
+
+    }
+    .static{
+      align-items: center;
+    }
+    .static p{
+      text-align: center;
+    }
+    
+    .footer{
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+    }
+
+    .userInfo button{
+      position: relative;
+      width: 100px;
+      align-self: center;
+    }
+    .userInfo{
+      flex-direction: column;
+    }
+    .studyProcess{
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and ( 100px <= width <= 680px){
+    .menuBar{
+      display: block;
+    }
+    .nav{
+      display: none;
+    }
+    .conatact{
+      flex-direction: column;
+    }
+  }
+  @media only screen and ( 100px <= width <= 680px){
+    .about{
+      width: 98%;
+    }
+    .login{
+      flex-direction: column;
+      width: auto;
+    }
+  }
+}
